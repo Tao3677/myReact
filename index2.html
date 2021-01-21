@@ -16,18 +16,13 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <!-- 编译JSX -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
+    
     <script type="text/babel">
-        //创建一个span元素
-        // var span = React.createElement("span", {}, "一个span元素");
-        // var span = <span>一个span元素</span>
-        //创建一个H1元素
-        // var h1 = React.createElement("h1", {
-        //     title: "第一个React元素"
-        // }, "Hello", "World", span);
-        // var h1 = <h1 title="第一个React元素">Hello World <span>一个span元素</span></h1>;
-        // console.log(h1);
-        ReactDOM.render(<h1 title="第一个React元素">Hello World <span>一个span元素</span></h1>, document.getElementById("root"));
+        // JSX 需要是个表达式
+        const h1Tag = (<h1 title="这是一个h1标签">Hello World <span>这是个span标签</span></h1>);
+        console.log(h1Tag, 'h1');
+        ReactDOM.render(h1Tag, document.getElementById('root'))
+        // ReactDOM.render(<h1 title="这是一个h1标签">Hello World<span>这是span标签</span></h1>, document.getElementById('root'))
     </script>
 </body>
 
