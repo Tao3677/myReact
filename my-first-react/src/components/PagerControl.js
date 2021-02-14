@@ -29,11 +29,9 @@ export default class PagerControl extends Component {
         this.setState({
             current: newPage,
             isLoading: true
-        })
-        // setstate 有点问题，先用异步给解决了
-        setTimeout(() => {
+        }, () => {
             this.fetchStudents()
-        }, 1000)
+        })
     }
     render() {
         return (
