@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import './index.css'
 export default class Modal extends Component {
+
+    hanleClose = e => {
+        // 阻止事件冒泡的一种
+        if(e.target.className === 'modal-content') {
+            this.props.onClose();
+        }
+    }
     
     render() {
         const defaultProps = {
@@ -13,7 +20,9 @@ export default class Modal extends Component {
                 style={{
                     backgroundColor: datas.bg
                 }}
-                onClick={datas.onClose}
+                onClick={e => {
+                    this.hanleClose(e)
+                }}
             >
                 <div className="modal-center">
                     {datas.children}
