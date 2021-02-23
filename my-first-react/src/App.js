@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import TestModal from './components/Modal/TestModal'
 
 export default class App extends Component {
     render() {
         return (
-            <TestModal />
+            <h1>Hello World</h1>
         )
     }
 }
