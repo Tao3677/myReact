@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import Test from './components/common/ThreeLayout/Test'
 
 export default class App extends Component {
     render() {
         return (
-            <h1>Hello World</h1>
+            <div>
+                <Test />
+            </div>
         )
     }
 }
